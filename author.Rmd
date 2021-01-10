@@ -1,4 +1,12 @@
 # 作者简介 {#author .unnumbered}
 
-王敏杰，四川师范大学研究生公选课《数据科学中的R语言》和《社会科学中的统计学》授课老师，西南交通大学量子物理学博士，爱好数据科学，喜欢用R和Stan统计编程，
-联系方式 38552109@qq.com
+```{r index-2, echo = FALSE, out.width = "45%"}
+knitr::include_graphics("images/xiaoyu.jpeg")
+```
+
+于吉军，军事医学科学院免疫学和生物信息学博士，爱好数据科学，喜欢用R和统计编程,欢迎广大志士前来叨扰，共同学习，共同改变世界！！！
+
+qq邮箱：1260297406@qq.com
+email： jijunyuedu@outlook.com
+
+

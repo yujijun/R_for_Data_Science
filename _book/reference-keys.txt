@@ -745,3 +745,7 @@ exams
 方式
 要求
 数据集-1
+fig:intro-ds-8
+fig:intro-ds-9
+fig:unnamed-chunk-6
+tab:tables-mtcars
