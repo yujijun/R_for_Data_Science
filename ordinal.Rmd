@@ -258,16 +258,16 @@ me_mass %>%
 
 ### ordinal 包
 
-```{r ordinal-17}
-library(ordinal)
-mod_ordinal <- clm(edu ~ edu_f + edu_m + sex + num_siblings + urban,
-  data = df1,
-  link = "logit",
-  thresholds = "flexible"
-)
-
-broom::tidy(mod_ordinal)
-```
+#```{r ordinal-17}
+# library(ordinal)
+# mod_ordinal <- clm(edu ~ edu_f + edu_m + sex + num_siblings + urban,
+#   data = df1,
+#   link = "logit",
+#   thresholds = "flexible"
+# )
+# 
+# broom::tidy(mod_ordinal)
+#```
 
 
 

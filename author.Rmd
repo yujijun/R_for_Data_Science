@@ -1,12 +1,15 @@
 # 作者简介 {#author .unnumbered}
 
-```{r index-2, echo = FALSE, out.width = "45%"}
+```{r index-x, echo = FALSE, out.width = "45%"}
 knitr::include_graphics("images/xiaoyu.jpeg")
 ```
 
-于吉军，军事医学科学院免疫学和生物信息学博士，爱好数据科学，喜欢用R和统计编程,欢迎广大志士前来叨扰，共同学习，共同改变世界！！！
+于吉军，军事医学科学院免疫学和生物信息学博士，爱好数据科学，喜欢用R和统计编程,欢迎广大志士前来叨扰，共同学习，给自己平静的世界带来一点骚动！！！
 
 qq邮箱：1260297406@qq.com
+
 email： jijunyuedu@outlook.com
+
+
 
 

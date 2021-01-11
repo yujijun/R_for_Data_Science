@@ -24,7 +24,7 @@
 <meta name="author" content="于吉军" />
 
 
-<meta name="date" content="2021-01-10" />
+<meta name="date" content="2021-01-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,14 +33,14 @@
   
 <link rel="prev" href="intro-R.html"/>
 <link rel="next" href="rmarkdown.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+<script src="libs/jquery/jquery.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-clipboard.css" rel="stylesheet" />
 
 
 
@@ -50,9 +50,14 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
-<script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
+<script src="libs/accessible-code-block/empty-anchor.js"></script>
+<link href="libs/pagedtable/css/pagedtable.css" rel="stylesheet" />
+<script src="libs/pagedtable/js/pagedtable.js"></script>
+<script src="libs/htmlwidgets/htmlwidgets.js"></script>
+<link href="libs/str_view/str_view.css" rel="stylesheet" />
+<script src="libs/str_view-binding/str_view.js"></script>
+<script src="libs/kePrint/kePrint.js"></script>
+<link href="libs/lightable/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -1058,53 +1063,53 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="向量" class="section level2">
 <h2><span class="header-section-number">3.1</span> 向量</h2>
 <p>对于原子型向量，我们有至少四种选取子集的方法</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="subsetting.html#cb1-1"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">1.1</span>, <span class="fl">2.2</span>, <span class="fl">3.3</span>, <span class="fl">4.4</span>, <span class="fl">5.5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="subsetting.html#cb98-1"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">1.1</span>, <span class="fl">2.2</span>, <span class="fl">3.3</span>, <span class="fl">4.4</span>, <span class="fl">5.5</span>)</span></code></pre></div>
 <ul>
 <li>正整数： 指定向量元素中的位置</li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="subsetting.html#cb2-1"></a>x[<span class="dv">1</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="subsetting.html#cb99-1"></a>x[<span class="dv">1</span>]</span></code></pre></div>
 <pre><code>## [1] 1.1</code></pre>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="subsetting.html#cb4-1"></a>x[<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)]</span></code></pre></div>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="subsetting.html#cb101-1"></a>x[<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)]</span></code></pre></div>
 <pre><code>## [1] 1.1 3.3</code></pre>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="subsetting.html#cb6-1"></a>x[<span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">1</span>)]</span></code></pre></div>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="subsetting.html#cb103-1"></a>x[<span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">1</span>)]</span></code></pre></div>
 <pre><code>## [1] 3.3 1.1</code></pre>
 <ul>
 <li>负整数：删除指定位置的元素</li>
 </ul>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="subsetting.html#cb8-1"></a>x[<span class="op">-</span><span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="subsetting.html#cb105-1"></a>x[<span class="op">-</span><span class="dv">2</span>]</span></code></pre></div>
 <pre><code>## [1] 1.1 3.3 4.4 5.5</code></pre>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="subsetting.html#cb10-1"></a>x[<span class="kw">c</span>(<span class="op">-</span><span class="dv">3</span>, <span class="dv">-4</span>)]</span></code></pre></div>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="subsetting.html#cb107-1"></a>x[<span class="kw">c</span>(<span class="op">-</span><span class="dv">3</span>, <span class="dv">-4</span>)]</span></code></pre></div>
 <pre><code>## [1] 1.1 2.2 5.5</code></pre>
 <ul>
 <li>逻辑向量：将<code>TRUE</code>对应位置的元素提取出来</li>
 </ul>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="subsetting.html#cb12-1"></a>x[<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>, <span class="ot">TRUE</span>)]</span></code></pre></div>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="subsetting.html#cb109-1"></a>x[<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>, <span class="ot">TRUE</span>)]</span></code></pre></div>
 <pre><code>## [1] 1.1 3.3 5.5</code></pre>
 <p>常用的一种情形；筛选出大于某个值的所有元素</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="subsetting.html#cb14-1"></a>x <span class="op">&gt;</span><span class="st"> </span><span class="dv">3</span></span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="subsetting.html#cb111-1"></a>x <span class="op">&gt;</span><span class="st"> </span><span class="dv">3</span></span></code></pre></div>
 <pre><code>## [1] FALSE FALSE  TRUE  TRUE  TRUE</code></pre>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="subsetting.html#cb16-1"></a>x[x <span class="op">&gt;</span><span class="st"> </span><span class="dv">3</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="subsetting.html#cb113-1"></a>x[x <span class="op">&gt;</span><span class="st"> </span><span class="dv">3</span>]</span></code></pre></div>
 <pre><code>## [1] 3.3 4.4 5.5</code></pre>
 <ul>
 <li>如果是命名向量</li>
 </ul>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="subsetting.html#cb18-1"></a>y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span> =<span class="st">  </span><span class="dv">11</span>, <span class="st">&quot;b&quot;</span> =<span class="st">  </span><span class="dv">12</span>, <span class="st">&quot;c&quot;</span> =<span class="st">  </span><span class="dv">13</span>, <span class="st">&quot;d&quot;</span> =<span class="st">  </span><span class="dv">14</span>)</span>
-<span id="cb18-2"><a href="subsetting.html#cb18-2"></a>y</span></code></pre></div>
+<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="subsetting.html#cb115-1"></a>y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span> =<span class="st">  </span><span class="dv">11</span>, <span class="st">&quot;b&quot;</span> =<span class="st">  </span><span class="dv">12</span>, <span class="st">&quot;c&quot;</span> =<span class="st">  </span><span class="dv">13</span>, <span class="st">&quot;d&quot;</span> =<span class="st">  </span><span class="dv">14</span>)</span>
+<span id="cb115-2"><a href="subsetting.html#cb115-2"></a>y</span></code></pre></div>
 <pre><code>##  a  b  c  d 
 ## 11 12 13 14</code></pre>
 <p>我们可以用命名向量，返回其对应位置的向量</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="subsetting.html#cb20-1"></a>y[<span class="kw">c</span>(<span class="st">&quot;d&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;a&quot;</span>)]</span></code></pre></div>
+<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="subsetting.html#cb117-1"></a>y[<span class="kw">c</span>(<span class="st">&quot;d&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;a&quot;</span>)]</span></code></pre></div>
 <pre><code>##  d  c  a 
 ## 14 13 11</code></pre>
 </div>
 <div id="列表" class="section level2">
 <h2><span class="header-section-number">3.2</span> 列表</h2>
 <p>对列表取子集，和向量的方法一样。使用 <code>[</code> 总是返回列表，</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="subsetting.html#cb22-1"></a>l &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="st">&quot;one&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>), </span>
-<span id="cb22-2"><a href="subsetting.html#cb22-2"></a>          <span class="st">&quot;two&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>), </span>
-<span id="cb22-3"><a href="subsetting.html#cb22-3"></a>          <span class="st">&quot;three&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>)</span>
-<span id="cb22-4"><a href="subsetting.html#cb22-4"></a>          )</span>
-<span id="cb22-5"><a href="subsetting.html#cb22-5"></a>l</span></code></pre></div>
+<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="subsetting.html#cb119-1"></a>l &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="st">&quot;one&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>), </span>
+<span id="cb119-2"><a href="subsetting.html#cb119-2"></a>          <span class="st">&quot;two&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>), </span>
+<span id="cb119-3"><a href="subsetting.html#cb119-3"></a>          <span class="st">&quot;three&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>)</span>
+<span id="cb119-4"><a href="subsetting.html#cb119-4"></a>          )</span>
+<span id="cb119-5"><a href="subsetting.html#cb119-5"></a>l</span></code></pre></div>
 <pre><code>## $one
 ## [1] &quot;a&quot; &quot;b&quot; &quot;c&quot;
 ## 
@@ -1113,17 +1118,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 
 ## $three
 ## [1]  TRUE FALSE</code></pre>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="subsetting.html#cb24-1"></a>l[<span class="dv">1</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="subsetting.html#cb121-1"></a>l[<span class="dv">1</span>]</span></code></pre></div>
 <pre><code>## $one
 ## [1] &quot;a&quot; &quot;b&quot; &quot;c&quot;</code></pre>
 <p>如果想列表中的元素，需要使用 <code>[[</code></p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="subsetting.html#cb26-1"></a>l[[<span class="dv">1</span>]]</span></code></pre></div>
+<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="subsetting.html#cb123-1"></a>l[[<span class="dv">1</span>]]</span></code></pre></div>
 <pre><code>## [1] &quot;a&quot; &quot;b&quot; &quot;c&quot;</code></pre>
 <p>也可以使用其中的元素名，比如<code>[["one"]]</code>，</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="subsetting.html#cb28-1"></a>l[[<span class="st">&quot;one&quot;</span>]]</span></code></pre></div>
+<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="subsetting.html#cb125-1"></a>l[[<span class="st">&quot;one&quot;</span>]]</span></code></pre></div>
 <pre><code>## [1] &quot;a&quot; &quot;b&quot; &quot;c&quot;</code></pre>
 <p>程序员觉得以上太麻烦了，要写太多的字符了，所以用<code>$</code>来简写</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="subsetting.html#cb30-1"></a>l<span class="op">$</span>one</span></code></pre></div>
+<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="subsetting.html#cb127-1"></a>l<span class="op">$</span>one</span></code></pre></div>
 <pre><code>## [1] &quot;a&quot; &quot;b&quot; &quot;c&quot;</code></pre>
 <p>所以请记住</p>
 <ul>
@@ -1133,19 +1138,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="矩阵" class="section level2">
 <h2><span class="header-section-number">3.3</span> 矩阵</h2>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="subsetting.html#cb32-1"></a>a &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">9</span>, <span class="dt">nrow =</span> <span class="dv">3</span>)</span>
-<span id="cb32-2"><a href="subsetting.html#cb32-2"></a>a</span></code></pre></div>
+<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="subsetting.html#cb129-1"></a>a &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">9</span>, <span class="dt">nrow =</span> <span class="dv">3</span>)</span>
+<span id="cb129-2"><a href="subsetting.html#cb129-2"></a>a</span></code></pre></div>
 <pre><code>##      [,1] [,2] [,3]
 ## [1,]    1    4    7
 ## [2,]    2    5    8
 ## [3,]    3    6    9</code></pre>
 <p>我们取第1行到第2行的2-3列，<code>[1:2, 2:3]</code>，中间以逗号分隔，于是得到一个新的矩阵</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="subsetting.html#cb34-1"></a>a[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>, <span class="dv">2</span><span class="op">:</span><span class="dv">3</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="subsetting.html#cb131-1"></a>a[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>, <span class="dv">2</span><span class="op">:</span><span class="dv">3</span>]</span></code></pre></div>
 <pre><code>##      [,1] [,2]
 ## [1,]    4    7
 ## [2,]    5    8</code></pre>
 <p>默认情况下, <code>[</code> 会将获取的数据，以尽可能低的维度形式呈现。比如</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="subsetting.html#cb36-1"></a>a[<span class="dv">1</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="subsetting.html#cb133-1"></a>a[<span class="dv">1</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">2</span>]</span></code></pre></div>
 <pre><code>## [1] 1 4</code></pre>
 <p>表示第1行的第1、2列，此时不是<span class="math inline">\(1 \times 2\)</span>矩阵，而是包含了两个元素的向量。
 <strong>以尽可能低的维度形式呈现</strong>，换句话说，这个1, 4长的像个矩阵，又有点像向量，向量的维度比矩阵低，那就是向量吧。</p>
@@ -1155,24 +1160,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>列方向，选取所有列</li>
 </ul>
 <p>可以这样简写</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="subsetting.html#cb38-1"></a>a[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>, ]</span></code></pre></div>
+<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="subsetting.html#cb135-1"></a>a[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>, ]</span></code></pre></div>
 <pre><code>##      [,1] [,2] [,3]
 ## [1,]    1    4    7
 ## [2,]    2    5    8</code></pre>
 <p>对于下面这种情况，想想，会输出什么</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="subsetting.html#cb40-1"></a>a[ , ]</span></code></pre></div>
+<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="subsetting.html#cb137-1"></a>a[ , ]</span></code></pre></div>
 <pre><code>##      [,1] [,2] [,3]
 ## [1,]    1    4    7
 ## [2,]    2    5    8
 ## [3,]    3    6    9</code></pre>
 <p>可以再简化点？</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="subsetting.html#cb42-1"></a>a[]</span></code></pre></div>
+<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="subsetting.html#cb139-1"></a>a[]</span></code></pre></div>
 <pre><code>##      [,1] [,2] [,3]
 ## [1,]    1    4    7
 ## [2,]    2    5    8
 ## [3,]    3    6    9</code></pre>
 <p>是不是可以再简化点？</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="subsetting.html#cb44-1"></a>a</span></code></pre></div>
+<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="subsetting.html#cb141-1"></a>a</span></code></pre></div>
 <pre><code>##      [,1] [,2] [,3]
 ## [1,]    1    4    7
 ## [2,]    2    5    8
@@ -1185,48 +1190,48 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>当选取数据框的某几列的时候，可以和list一样，指定元素位置，比如<code>df[1:2]</code>选取前两列</li>
 <li>也可以像矩阵一样，使用行和列的标识选取，比如<code>df[1:3, ]</code>选取前三行的所有列</li>
 </ul>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="subsetting.html#cb46-1"></a>df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>,</span>
-<span id="cb46-2"><a href="subsetting.html#cb46-2"></a>                 <span class="dt">y =</span> <span class="dv">4</span><span class="op">:</span><span class="dv">1</span>,</span>
-<span id="cb46-3"><a href="subsetting.html#cb46-3"></a>                 <span class="dt">z =</span> <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>)</span>
-<span id="cb46-4"><a href="subsetting.html#cb46-4"></a>                 )</span>
-<span id="cb46-5"><a href="subsetting.html#cb46-5"></a>df</span></code></pre></div>
+<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="subsetting.html#cb143-1"></a>df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>,</span>
+<span id="cb143-2"><a href="subsetting.html#cb143-2"></a>                 <span class="dt">y =</span> <span class="dv">4</span><span class="op">:</span><span class="dv">1</span>,</span>
+<span id="cb143-3"><a href="subsetting.html#cb143-3"></a>                 <span class="dt">z =</span> <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>)</span>
+<span id="cb143-4"><a href="subsetting.html#cb143-4"></a>                 )</span>
+<span id="cb143-5"><a href="subsetting.html#cb143-5"></a>df</span></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["x"],"name":[1],"type":["int"],"align":["right"]},{"label":["y"],"name":[2],"type":["int"],"align":["right"]},{"label":["z"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"4","3":"a"},{"1":"2","2":"3","3":"b"},{"1":"3","2":"2","3":"c"},{"1":"4","2":"1","3":"d"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="subsetting.html#cb47-1"></a><span class="co"># Like a list</span></span>
-<span id="cb47-2"><a href="subsetting.html#cb47-2"></a>df[<span class="kw">c</span>(<span class="st">&quot;x&quot;</span>, <span class="st">&quot;z&quot;</span>)]</span></code></pre></div>
+<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="subsetting.html#cb144-1"></a><span class="co"># Like a list</span></span>
+<span id="cb144-2"><a href="subsetting.html#cb144-2"></a>df[<span class="kw">c</span>(<span class="st">&quot;x&quot;</span>, <span class="st">&quot;z&quot;</span>)]</span></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["x"],"name":[1],"type":["int"],"align":["right"]},{"label":["z"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"a"},{"1":"2","2":"b"},{"1":"3","2":"c"},{"1":"4","2":"d"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="subsetting.html#cb48-1"></a><span class="co"># Like a matrix</span></span>
-<span id="cb48-2"><a href="subsetting.html#cb48-2"></a>df[, <span class="kw">c</span>(<span class="st">&quot;x&quot;</span>, <span class="st">&quot;z&quot;</span>)]</span></code></pre></div>
+<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="subsetting.html#cb145-1"></a><span class="co"># Like a matrix</span></span>
+<span id="cb145-2"><a href="subsetting.html#cb145-2"></a>df[, <span class="kw">c</span>(<span class="st">&quot;x&quot;</span>, <span class="st">&quot;z&quot;</span>)]</span></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["x"],"name":[1],"type":["int"],"align":["right"]},{"label":["z"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"a"},{"1":"2","2":"b"},{"1":"3","2":"c"},{"1":"4","2":"d"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <p>也可以通过行和列的位置</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="subsetting.html#cb49-1"></a>df[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="subsetting.html#cb146-1"></a>df[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>]</span></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["x"],"name":[1],"type":["int"],"align":["right"]},{"label":["y"],"name":[2],"type":["int"],"align":["right"]}],"data":[{"1":"1","2":"4"},{"1":"2","2":"3"},{"1":"3","2":"2"},{"1":"4","2":"1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="subsetting.html#cb50-1"></a>df[<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>, ]</span></code></pre></div>
+<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="subsetting.html#cb147-1"></a>df[<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>, ]</span></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["x"],"name":[1],"type":["int"],"align":["right"]},{"label":["y"],"name":[2],"type":["int"],"align":["right"]},{"label":["z"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"4","3":"a","_rn_":"1"},{"1":"2","2":"3","3":"b","_rn_":"2"},{"1":"3","2":"2","3":"c","_rn_":"3"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <p>当遇到单行或单列的时候，也和矩阵一样，数据会降维</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="subsetting.html#cb51-1"></a>df[, <span class="st">&quot;x&quot;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="subsetting.html#cb148-1"></a>df[, <span class="st">&quot;x&quot;</span>]</span></code></pre></div>
 <pre><code>## [1] 1 2 3 4</code></pre>
 <p>如果想避免降维，需要多写一句话</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="subsetting.html#cb53-1"></a>df[, <span class="st">&quot;x&quot;</span>, drop =<span class="st"> </span><span class="ot">FALSE</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="subsetting.html#cb150-1"></a>df[, <span class="st">&quot;x&quot;</span>, drop =<span class="st"> </span><span class="ot">FALSE</span>]</span></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["x"],"name":[1],"type":["int"],"align":["right"]}],"data":[{"1":"1"},{"1":"2"},{"1":"3"},{"1":"4"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
@@ -1238,24 +1243,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="增强型数据框" class="section level2">
 <h2><span class="header-section-number">3.5</span> 增强型数据框</h2>
 <p>tibble是增强型的data.frame，选取tibble的行或者列，即使遇到单行或者单列的时候，数据也不会降维，总是返回tibble，即仍然是数据框的形式。</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="subsetting.html#cb54-1"></a>tb &lt;-<span class="st"> </span>tibble<span class="op">::</span><span class="kw">tibble</span>(</span>
-<span id="cb54-2"><a href="subsetting.html#cb54-2"></a>  <span class="dt">x =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>,</span>
-<span id="cb54-3"><a href="subsetting.html#cb54-3"></a>  <span class="dt">y =</span> <span class="dv">4</span><span class="op">:</span><span class="dv">1</span>,</span>
-<span id="cb54-4"><a href="subsetting.html#cb54-4"></a>  <span class="dt">z =</span> <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>)</span>
-<span id="cb54-5"><a href="subsetting.html#cb54-5"></a>)</span>
-<span id="cb54-6"><a href="subsetting.html#cb54-6"></a>tb</span></code></pre></div>
+<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="subsetting.html#cb151-1"></a>tb &lt;-<span class="st"> </span>tibble<span class="op">::</span><span class="kw">tibble</span>(</span>
+<span id="cb151-2"><a href="subsetting.html#cb151-2"></a>  <span class="dt">x =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>,</span>
+<span id="cb151-3"><a href="subsetting.html#cb151-3"></a>  <span class="dt">y =</span> <span class="dv">4</span><span class="op">:</span><span class="dv">1</span>,</span>
+<span id="cb151-4"><a href="subsetting.html#cb151-4"></a>  <span class="dt">z =</span> <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>)</span>
+<span id="cb151-5"><a href="subsetting.html#cb151-5"></a>)</span>
+<span id="cb151-6"><a href="subsetting.html#cb151-6"></a>tb</span></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["x"],"name":[1],"type":["int"],"align":["right"]},{"label":["y"],"name":[2],"type":["int"],"align":["right"]},{"label":["z"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"4","3":"a"},{"1":"2","2":"3","3":"b"},{"1":"3","2":"2","3":"c"},{"1":"4","2":"1","3":"d"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="subsetting.html#cb55-1"></a>tb[<span class="st">&quot;x&quot;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="subsetting.html#cb152-1"></a>tb[<span class="st">&quot;x&quot;</span>]</span></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["x"],"name":[1],"type":["int"],"align":["right"]}],"data":[{"1":"1"},{"1":"2"},{"1":"3"},{"1":"4"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="subsetting.html#cb56-1"></a>tb[, <span class="st">&quot;x&quot;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="subsetting.html#cb153-1"></a>tb[, <span class="st">&quot;x&quot;</span>]</span></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["x"],"name":[1],"type":["int"],"align":["right"]}],"data":[{"1":"1"},{"1":"2"},{"1":"3"},{"1":"4"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
@@ -1270,11 +1275,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>对数据框，思考<code>df["x"]</code>， <code>df[["x"]]</code>， <code>df$x</code>三者的区别?</li>
 <li>如果<code>x</code>是一个矩阵，请问 <code>x[] &lt;- 0</code> 和<code>x &lt;- 0</code> 有什么区别？</li>
 </ul>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="subsetting.html#cb57-1"></a>m &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">9</span>, <span class="dt">nrow =</span> <span class="dv">3</span>)</span>
-<span id="cb57-2"><a href="subsetting.html#cb57-2"></a>m</span></code></pre></div>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="subsetting.html#cb58-1"></a><span class="kw">diag</span>(m)</span>
-<span id="cb58-2"><a href="subsetting.html#cb58-2"></a><span class="kw">upper.tri</span>(m, <span class="dt">diag =</span> <span class="ot">FALSE</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="subsetting.html#cb59-1"></a>m[<span class="kw">upper.tri</span>(m, <span class="dt">diag =</span> <span class="ot">FALSE</span>)]</span></code></pre></div>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="subsetting.html#cb154-1"></a>m &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">9</span>, <span class="dt">nrow =</span> <span class="dv">3</span>)</span>
+<span id="cb154-2"><a href="subsetting.html#cb154-2"></a>m</span></code></pre></div>
+<div class="sourceCode" id="cb155"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb155-1"><a href="subsetting.html#cb155-1"></a><span class="kw">diag</span>(m)</span>
+<span id="cb155-2"><a href="subsetting.html#cb155-2"></a><span class="kw">upper.tri</span>(m, <span class="dt">diag =</span> <span class="ot">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="subsetting.html#cb156-1"></a>m[<span class="kw">upper.tri</span>(m, <span class="dt">diag =</span> <span class="ot">FALSE</span>)]</span></code></pre></div>
 
 </div>
 </div>
@@ -1284,7 +1289,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="footnotes">
 <hr />
 <ol start="1">
-<li id="fn1"><p>操控盒子里的东西，比如把糖果变大，这个过程叫函数.<a href="subsetting.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn1"><p><a href="https://github.com/hadley/ggplot2movies/blob/master/R/movies.R" class="uri">https://github.com/hadley/ggplot2movies/blob/master/R/movies.R</a><a href="subsetting.html#fnref1" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -1296,15 +1301,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a href="rmarkdown.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/lunr.js"></script>
+<script src="libs/gitbook/js/clipboard.min.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script src="libs/gitbook/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({

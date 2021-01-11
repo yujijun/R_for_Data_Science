@@ -24,7 +24,7 @@
 <meta name="author" content="于吉军" />
 
 
-<meta name="date" content="2021-01-10" />
+<meta name="date" content="2021-01-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,14 +33,14 @@
   
 <link rel="prev" href="subsetting.html"/>
 <link rel="next" href="readr.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+<script src="libs/jquery/jquery.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-clipboard.css" rel="stylesheet" />
 
 
 
@@ -50,9 +50,14 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
-<script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
+<script src="libs/accessible-code-block/empty-anchor.js"></script>
+<link href="libs/pagedtable/css/pagedtable.css" rel="stylesheet" />
+<script src="libs/pagedtable/js/pagedtable.js"></script>
+<script src="libs/htmlwidgets/htmlwidgets.js"></script>
+<link href="libs/str_view/str_view.css" rel="stylesheet" />
+<script src="libs/str_view-binding/str_view.js"></script>
+<script src="libs/kePrint/kePrint.js"></script>
+<link href="libs/lightable/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -1056,25 +1061,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="markdown-基本语法" class="section level2">
 <h2><span class="header-section-number">4.2</span> markdown 基本语法</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="rmarkdown.html#cb1-1"></a><span class="fu"># This is a title</span></span>
-<span id="cb1-2"><a href="rmarkdown.html#cb1-2"></a></span>
-<span id="cb1-3"><a href="rmarkdown.html#cb1-3"></a><span class="fu">#  第一章   （注意   &quot;#&quot; 与 &quot;第一章&quot;之间有空格）</span></span>
-<span id="cb1-4"><a href="rmarkdown.html#cb1-4"></a><span class="fu">##  第一节  （同上，&quot;##&quot; 与 &quot;第一节&quot;之间有空格）</span></span>
-<span id="cb1-5"><a href="rmarkdown.html#cb1-5"></a></span>
-<span id="cb1-6"><a href="rmarkdown.html#cb1-6"></a>This is a sentence.</span>
-<span id="cb1-7"><a href="rmarkdown.html#cb1-7"></a></span>
-<span id="cb1-8"><a href="rmarkdown.html#cb1-8"></a>Now a list begins:</span>
-<span id="cb1-9"><a href="rmarkdown.html#cb1-9"></a>  </span>
-<span id="cb1-10"><a href="rmarkdown.html#cb1-10"></a>- <span class="st">no importance</span></span>
-<span id="cb1-11"><a href="rmarkdown.html#cb1-11"></a><span class="st">- again</span></span>
-<span id="cb1-12"><a href="rmarkdown.html#cb1-12"></a><span class="st">- repeat</span></span>
-<span id="cb1-13"><a href="rmarkdown.html#cb1-13"></a>  </span>
-<span id="cb1-14"><a href="rmarkdown.html#cb1-14"></a><span class="st">A numbered list:</span></span>
-<span id="cb1-15"><a href="rmarkdown.html#cb1-15"></a>  </span>
-<span id="cb1-16"><a href="rmarkdown.html#cb1-16"></a><span class="st">1. first</span></span>
-<span id="cb1-17"><a href="rmarkdown.html#cb1-17"></a><span class="st">2. second</span></span>
-<span id="cb1-18"><a href="rmarkdown.html#cb1-18"></a></span>
-<span id="cb1-19"><a href="rmarkdown.html#cb1-19"></a>__bold__, _italic_, ~~strike through~~</span></code></pre></div>
+<div class="sourceCode" id="cb157"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb157-1"><a href="rmarkdown.html#cb157-1"></a><span class="fu"># This is a title</span></span>
+<span id="cb157-2"><a href="rmarkdown.html#cb157-2"></a></span>
+<span id="cb157-3"><a href="rmarkdown.html#cb157-3"></a><span class="fu">#  第一章   （注意   &quot;#&quot; 与 &quot;第一章&quot;之间有空格）</span></span>
+<span id="cb157-4"><a href="rmarkdown.html#cb157-4"></a><span class="fu">##  第一节  （同上，&quot;##&quot; 与 &quot;第一节&quot;之间有空格）</span></span>
+<span id="cb157-5"><a href="rmarkdown.html#cb157-5"></a></span>
+<span id="cb157-6"><a href="rmarkdown.html#cb157-6"></a>This is a sentence.</span>
+<span id="cb157-7"><a href="rmarkdown.html#cb157-7"></a></span>
+<span id="cb157-8"><a href="rmarkdown.html#cb157-8"></a>Now a list begins:</span>
+<span id="cb157-9"><a href="rmarkdown.html#cb157-9"></a>  </span>
+<span id="cb157-10"><a href="rmarkdown.html#cb157-10"></a>- <span class="st">no importance</span></span>
+<span id="cb157-11"><a href="rmarkdown.html#cb157-11"></a><span class="st">- again</span></span>
+<span id="cb157-12"><a href="rmarkdown.html#cb157-12"></a><span class="st">- repeat</span></span>
+<span id="cb157-13"><a href="rmarkdown.html#cb157-13"></a>  </span>
+<span id="cb157-14"><a href="rmarkdown.html#cb157-14"></a><span class="st">A numbered list:</span></span>
+<span id="cb157-15"><a href="rmarkdown.html#cb157-15"></a>  </span>
+<span id="cb157-16"><a href="rmarkdown.html#cb157-16"></a><span class="st">1. first</span></span>
+<span id="cb157-17"><a href="rmarkdown.html#cb157-17"></a><span class="st">2. second</span></span>
+<span id="cb157-18"><a href="rmarkdown.html#cb157-18"></a></span>
+<span id="cb157-19"><a href="rmarkdown.html#cb157-19"></a>__bold__, _italic_, ~~strike through~~</span></code></pre></div>
 </div>
 <div id="hello-r-markdown" class="section level2">
 <h2><span class="header-section-number">4.3</span> Hello R Markdown</h2>
@@ -1091,16 +1096,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="生成html文档" class="section level2">
 <h2><span class="header-section-number">4.4</span> 生成html文档</h2>
 <p>希望html文档有章节号、目录或者更好显示表格，可以修改头文件（用下面的内容替换Rmarkdown的头文件）</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="rmarkdown.html#cb2-1"></a><span class="pp">---</span></span>
-<span id="cb2-2"><a href="rmarkdown.html#cb2-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Habits</span></span>
-<span id="cb2-3"><a href="rmarkdown.html#cb2-3"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> John Doe</span></span>
-<span id="cb2-4"><a href="rmarkdown.html#cb2-4"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;2021-01-10&quot;</span></span>
-<span id="cb2-5"><a href="rmarkdown.html#cb2-5"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb2-6"><a href="rmarkdown.html#cb2-6"></a><span class="at">  </span><span class="fu">html_document</span><span class="kw">:</span></span>
-<span id="cb2-7"><a href="rmarkdown.html#cb2-7"></a><span class="at">    </span><span class="fu">df_print</span><span class="kw">:</span><span class="at"> paged</span></span>
-<span id="cb2-8"><a href="rmarkdown.html#cb2-8"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">yes</span></span>
-<span id="cb2-9"><a href="rmarkdown.html#cb2-9"></a><span class="at">    </span><span class="fu">number_sections</span><span class="kw">:</span><span class="at"> </span><span class="ch">yes</span></span>
-<span id="cb2-10"><a href="rmarkdown.html#cb2-10"></a><span class="pp">---</span></span></code></pre></div>
+<div class="sourceCode" id="cb158"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb158-1"><a href="rmarkdown.html#cb158-1"></a><span class="pp">---</span></span>
+<span id="cb158-2"><a href="rmarkdown.html#cb158-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Habits</span></span>
+<span id="cb158-3"><a href="rmarkdown.html#cb158-3"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> John Doe</span></span>
+<span id="cb158-4"><a href="rmarkdown.html#cb158-4"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;2021-01-11&quot;</span></span>
+<span id="cb158-5"><a href="rmarkdown.html#cb158-5"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb158-6"><a href="rmarkdown.html#cb158-6"></a><span class="at">  </span><span class="fu">html_document</span><span class="kw">:</span></span>
+<span id="cb158-7"><a href="rmarkdown.html#cb158-7"></a><span class="at">    </span><span class="fu">df_print</span><span class="kw">:</span><span class="at"> paged</span></span>
+<span id="cb158-8"><a href="rmarkdown.html#cb158-8"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">yes</span></span>
+<span id="cb158-9"><a href="rmarkdown.html#cb158-9"></a><span class="at">    </span><span class="fu">number_sections</span><span class="kw">:</span><span class="at"> </span><span class="ch">yes</span></span>
+<span id="cb158-10"><a href="rmarkdown.html#cb158-10"></a><span class="pp">---</span></span></code></pre></div>
 </div>
 <div id="生成word文档" class="section level2">
 <h2><span class="header-section-number">4.5</span> 生成word文档</h2>
@@ -1118,26 +1123,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 (e.g. MacTeX is approximate 3.9G). 如果你之前没有安装过
 LaTeX，我推荐你安装轻量级的 <code>tinytex</code>. 安装方法如下，打开R，然后再命令行输入:</li>
 </ol>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="rmarkdown.html#cb3-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;tinytex&quot;</span>)</span>
-<span id="cb3-2"><a href="rmarkdown.html#cb3-2"></a>tinytex<span class="op">::</span><span class="kw">install_tinytex</span>(<span class="dt">dir =</span> <span class="st">&quot;D:</span><span class="ch">\\</span><span class="st">Tinytex&quot;</span>, <span class="dt">force =</span> T)</span></code></pre></div>
+<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="rmarkdown.html#cb159-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;tinytex&quot;</span>)</span>
+<span id="cb159-2"><a href="rmarkdown.html#cb159-2"></a>tinytex<span class="op">::</span><span class="kw">install_tinytex</span>(<span class="dt">dir =</span> <span class="st">&quot;D:</span><span class="ch">\\</span><span class="st">Tinytex&quot;</span>, <span class="dt">force =</span> T)</span></code></pre></div>
 <p>中途会有两次警告，按 “ 确定 ” 就可以了。</p>
 <ol start="4" style="list-style-type: decimal">
 <li>修改头文件，用下面的内容替换Rmarkdown的头文件, 不要修改缩进</li>
 </ol>
-<div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="rmarkdown.html#cb4-1"></a><span class="pp">---</span></span>
-<span id="cb4-2"><a href="rmarkdown.html#cb4-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;Going deeper with dplyr&#39;</span></span>
-<span id="cb4-3"><a href="rmarkdown.html#cb4-3"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;王小二&quot;</span></span>
-<span id="cb4-4"><a href="rmarkdown.html#cb4-4"></a><span class="st">date: &quot;</span><span class="er">`r</span><span class="at"> </span><span class="er">Sys.Date()`&quot;</span></span>
-<span id="cb4-5"><a href="rmarkdown.html#cb4-5"></a><span class="fu">output</span><span class="kw">:</span></span>
-<span id="cb4-6"><a href="rmarkdown.html#cb4-6"></a><span class="at">  </span><span class="fu">pdf_document</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb4-7"><a href="rmarkdown.html#cb4-7"></a><span class="at">    </span><span class="fu">latex_engine</span><span class="kw">:</span><span class="at"> xelatex</span></span>
-<span id="cb4-8"><a href="rmarkdown.html#cb4-8"></a><span class="at">    </span><span class="fu">extra_dependencies</span><span class="kw">:</span></span>
-<span id="cb4-9"><a href="rmarkdown.html#cb4-9"></a><span class="at">      </span><span class="fu">ctex</span><span class="kw">:</span><span class="at"> UTF8</span></span>
-<span id="cb4-10"><a href="rmarkdown.html#cb4-10"></a><span class="at">    </span><span class="fu">number_sections</span><span class="kw">:</span><span class="at"> </span><span class="ch">yes</span></span>
-<span id="cb4-11"><a href="rmarkdown.html#cb4-11"></a><span class="at">    </span><span class="fu">df_print</span><span class="kw">:</span><span class="at"> kable</span></span>
-<span id="cb4-12"><a href="rmarkdown.html#cb4-12"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">yes</span></span>
-<span id="cb4-13"><a href="rmarkdown.html#cb4-13"></a><span class="fu">classoptions</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;hyperref, 12pt, a4paper&quot;</span></span>
-<span id="cb4-14"><a href="rmarkdown.html#cb4-14"></a><span class="pp">---</span></span></code></pre></div>
+<div class="sourceCode" id="cb160"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb160-1"><a href="rmarkdown.html#cb160-1"></a><span class="pp">---</span></span>
+<span id="cb160-2"><a href="rmarkdown.html#cb160-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;Going deeper with dplyr&#39;</span></span>
+<span id="cb160-3"><a href="rmarkdown.html#cb160-3"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;王小二&quot;</span></span>
+<span id="cb160-4"><a href="rmarkdown.html#cb160-4"></a><span class="st">date: &quot;</span><span class="er">`r</span><span class="at"> </span><span class="er">Sys.Date()`&quot;</span></span>
+<span id="cb160-5"><a href="rmarkdown.html#cb160-5"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb160-6"><a href="rmarkdown.html#cb160-6"></a><span class="at">  </span><span class="fu">pdf_document</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb160-7"><a href="rmarkdown.html#cb160-7"></a><span class="at">    </span><span class="fu">latex_engine</span><span class="kw">:</span><span class="at"> xelatex</span></span>
+<span id="cb160-8"><a href="rmarkdown.html#cb160-8"></a><span class="at">    </span><span class="fu">extra_dependencies</span><span class="kw">:</span></span>
+<span id="cb160-9"><a href="rmarkdown.html#cb160-9"></a><span class="at">      </span><span class="fu">ctex</span><span class="kw">:</span><span class="at"> UTF8</span></span>
+<span id="cb160-10"><a href="rmarkdown.html#cb160-10"></a><span class="at">    </span><span class="fu">number_sections</span><span class="kw">:</span><span class="at"> </span><span class="ch">yes</span></span>
+<span id="cb160-11"><a href="rmarkdown.html#cb160-11"></a><span class="at">    </span><span class="fu">df_print</span><span class="kw">:</span><span class="at"> kable</span></span>
+<span id="cb160-12"><a href="rmarkdown.html#cb160-12"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">yes</span></span>
+<span id="cb160-13"><a href="rmarkdown.html#cb160-13"></a><span class="fu">classoptions</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;hyperref, 12pt, a4paper&quot;</span></span>
+<span id="cb160-14"><a href="rmarkdown.html#cb160-14"></a><span class="pp">---</span></span></code></pre></div>
 </div>
 <div id="使用方法" class="section level2">
 <h2><span class="header-section-number">4.7</span> 使用方法</h2>
@@ -1147,9 +1152,9 @@ LaTeX，我推荐你安装轻量级的 <code>tinytex</code>. 安装方法如下�
 <code>$$\frac{\sum (\bar{x} - x_i)^2}{n-1}$$</code>，那么实际输出:</p>
 <p><span class="math display">\[\frac{\sum (\bar{x} - x_i)^2}{n-1}\]</span></p>
 <p>也可以使用latex的等式环境， 比如</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb5-1"><a href="rmarkdown.html#cb5-1"></a><span class="ss">$$</span><span class="sc">\Theta</span><span class="ss"> = </span><span class="sc">\begin</span><span class="ss">{pmatrix}</span><span class="sc">\alpha</span><span class="ss"> &amp; </span><span class="sc">\beta\\</span></span>
-<span id="cb5-2"><a href="rmarkdown.html#cb5-2"></a><span class="sc">\gamma</span><span class="ss"> &amp; </span><span class="sc">\delta</span></span>
-<span id="cb5-3"><a href="rmarkdown.html#cb5-3"></a><span class="sc">\end</span><span class="ss">{pmatrix}$$</span></span></code></pre></div>
+<div class="sourceCode" id="cb161"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb161-1"><a href="rmarkdown.html#cb161-1"></a><span class="ss">$$</span><span class="sc">\Theta</span><span class="ss"> = </span><span class="sc">\begin</span><span class="ss">{pmatrix}</span><span class="sc">\alpha</span><span class="ss"> &amp; </span><span class="sc">\beta\\</span></span>
+<span id="cb161-2"><a href="rmarkdown.html#cb161-2"></a><span class="sc">\gamma</span><span class="ss"> &amp; </span><span class="sc">\delta</span></span>
+<span id="cb161-3"><a href="rmarkdown.html#cb161-3"></a><span class="sc">\end</span><span class="ss">{pmatrix}$$</span></span></code></pre></div>
 <p>输出</p>
 <p><span class="math display">\[
 \Theta = \begin{pmatrix}\alpha &amp; \beta\\
@@ -1159,10 +1164,10 @@ LaTeX，我推荐你安装轻量级的 <code>tinytex</code>. 安装方法如下�
 </div>
 <div id="插入图片" class="section level3">
 <h3><span class="header-section-number">4.7.2</span> 插入图片</h3>
-<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="rmarkdown.html#cb6-1"></a><span class="bn">```{r, out.width=&#39;35%&#39;, fig.align=&#39;left&#39;, fig.cap=&#39;this is caption&#39;}</span></span>
-<span id="cb6-2"><a href="rmarkdown.html#cb6-2"></a><span class="bn">knitr::include_graphics(&quot;images/R_logo.png&quot;)</span></span>
-<span id="cb6-3"><a href="rmarkdown.html#cb6-3"></a><span class="bn">```</span></span></code></pre></div>
-<div class="figure" style="text-align: left"><span id="fig:unnamed-chunk-6"></span>
+<div class="sourceCode" id="cb162"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb162-1"><a href="rmarkdown.html#cb162-1"></a><span class="bn">```{r, out.width=&#39;35%&#39;, fig.align=&#39;left&#39;, fig.cap=&#39;this is caption&#39;}</span></span>
+<span id="cb162-2"><a href="rmarkdown.html#cb162-2"></a><span class="bn">knitr::include_graphics(&quot;images/R_logo.png&quot;)</span></span>
+<span id="cb162-3"><a href="rmarkdown.html#cb162-3"></a><span class="bn">```</span></span></code></pre></div>
+<div class="figure" style="text-align: left"><span id="fig:unnamed-chunk-7"></span>
 <img src="images/R_logo.png" alt="this is caption" width="35%" />
 <p class="caption">
 图 4.1: this is caption
@@ -1171,23 +1176,23 @@ LaTeX，我推荐你安装轻量级的 <code>tinytex</code>. 安装方法如下�
 </div>
 <div id="运行代码" class="section level3">
 <h3><span class="header-section-number">4.7.3</span> 运行代码</h3>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="rmarkdown.html#cb7-1"></a><span class="kw">summary</span>(cars)</span></code></pre></div>
-<pre><code>##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00</code></pre>
+<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="rmarkdown.html#cb163-1"></a><span class="kw">summary</span>(cars)</span></code></pre></div>
+<pre><code>##      speed           dist    
+##  Min.   : 4.0   Min.   :  2  
+##  1st Qu.:12.0   1st Qu.: 26  
+##  Median :15.0   Median : 36  
+##  Mean   :15.4   Mean   : 43  
+##  3rd Qu.:19.0   3rd Qu.: 56  
+##  Max.   :25.0   Max.   :120</code></pre>
 </div>
 <div id="表格" class="section level3">
 <h3><span class="header-section-number">4.7.4</span> 表格</h3>
 <!-- ```{r tables-mtcars,  echo = TRUE} -->
 <!-- knitr::kable(iris[1:5, ], caption = "A caption") -->
 <!-- ``` -->
-<div class="sourceCode" id="cb9"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb9-1"><a href="rmarkdown.html#cb9-1"></a><span class="bn">```{r tables-mtcars}</span></span>
-<span id="cb9-2"><a href="rmarkdown.html#cb9-2"></a><span class="bn">knitr::kable(iris[1:5, ], caption = &quot;A caption&quot;)</span></span>
-<span id="cb9-3"><a href="rmarkdown.html#cb9-3"></a><span class="bn">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb165"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb165-1"><a href="rmarkdown.html#cb165-1"></a><span class="bn">```{r tables-mtcars}</span></span>
+<span id="cb165-2"><a href="rmarkdown.html#cb165-2"></a><span class="bn">knitr::kable(iris[1:5, ], caption = &quot;A caption&quot;)</span></span>
+<span id="cb165-3"><a href="rmarkdown.html#cb165-3"></a><span class="bn">```</span></span></code></pre></div>
 <table>
 <caption><span id="tab:tables-mtcars">表 4.1: </span>A caption</caption>
 <thead>
@@ -1241,43 +1246,31 @@ LaTeX，我推荐你安装轻量级的 <code>tinytex</code>. 安装方法如下�
 </div>
 <div id="生成图片" class="section level3">
 <h3><span class="header-section-number">4.7.5</span> 生成图片</h3>
-<div class="sourceCode" id="cb10"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb10-1"><a href="rmarkdown.html#cb10-1"></a><span class="bn">```{r}</span></span>
-<span id="cb10-2"><a href="rmarkdown.html#cb10-2"></a><span class="bn">plot(pressure)</span></span>
-<span id="cb10-3"><a href="rmarkdown.html#cb10-3"></a><span class="bn">```</span></span></code></pre></div>
-<p><img src="R4DS_files/figure-html/unnamed-chunk-8-1.png" width="85%" /></p>
+<div class="sourceCode" id="cb166"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb166-1"><a href="rmarkdown.html#cb166-1"></a><span class="bn">```{r}</span></span>
+<span id="cb166-2"><a href="rmarkdown.html#cb166-2"></a><span class="bn">plot(pressure)</span></span>
+<span id="cb166-3"><a href="rmarkdown.html#cb166-3"></a><span class="bn">```</span></span></code></pre></div>
+<p><img src="R4DS_files/figure-html/unnamed-chunk-9-1.png" width="85%" /></p>
 <p>或者</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb11-1"><a href="rmarkdown.html#cb11-1"></a><span class="bn">```{r, out.width = &#39;85%&#39;, fig.showtext = TRUE}</span></span>
-<span id="cb11-2"><a href="rmarkdown.html#cb11-2"></a><span class="bn">library(tidyverse)</span></span>
-<span id="cb11-3"><a href="rmarkdown.html#cb11-3"></a><span class="bn">library(nycflights13)</span></span>
-<span id="cb11-4"><a href="rmarkdown.html#cb11-4"></a><span class="bn">library(showtext)</span></span>
-<span id="cb11-5"><a href="rmarkdown.html#cb11-5"></a><span class="bn">showtext_auto()</span></span>
-<span id="cb11-6"><a href="rmarkdown.html#cb11-6"></a></span>
-<span id="cb11-7"><a href="rmarkdown.html#cb11-7"></a><span class="bn">flights %&gt;%</span></span>
-<span id="cb11-8"><a href="rmarkdown.html#cb11-8"></a><span class="bn">  group_by(dest) %&gt;%</span></span>
-<span id="cb11-9"><a href="rmarkdown.html#cb11-9"></a><span class="bn">  summarize(</span></span>
-<span id="cb11-10"><a href="rmarkdown.html#cb11-10"></a><span class="bn">    count = n(),</span></span>
-<span id="cb11-11"><a href="rmarkdown.html#cb11-11"></a><span class="bn">    dist = mean(distance, na.rm = TRUE),</span></span>
-<span id="cb11-12"><a href="rmarkdown.html#cb11-12"></a><span class="bn">    delay = mean(arr_delay, na.rm = TRUE)</span></span>
-<span id="cb11-13"><a href="rmarkdown.html#cb11-13"></a><span class="bn">  ) %&gt;%</span></span>
-<span id="cb11-14"><a href="rmarkdown.html#cb11-14"></a><span class="bn">  dplyr::filter(delay &gt; 0, count &gt; 20, dest != &quot;HNL&quot;) %&gt;%</span></span>
-<span id="cb11-15"><a href="rmarkdown.html#cb11-15"></a><span class="bn">  ggplot(mapping = aes(x = dist, y = delay)) +</span></span>
-<span id="cb11-16"><a href="rmarkdown.html#cb11-16"></a><span class="bn">  geom_point(aes(size = count), alpha = 1 / 3) +</span></span>
-<span id="cb11-17"><a href="rmarkdown.html#cb11-17"></a><span class="bn">  geom_smooth(se = FALSE) +</span></span>
-<span id="cb11-18"><a href="rmarkdown.html#cb11-18"></a><span class="bn">  ggtitle(&quot;这是我的标题&quot;)</span></span>
-<span id="cb11-19"><a href="rmarkdown.html#cb11-19"></a><span class="bn">```</span></span></code></pre></div>
-<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
-<pre><code>## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
-## ✓ tibble  3.0.4     ✓ dplyr   1.0.2
-## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
-## ✓ readr   1.4.0     ✓ forcats 0.5.0</code></pre>
-<pre><code>## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()</code></pre>
-<pre><code>## Loading required package: sysfonts</code></pre>
-<pre><code>## Loading required package: showtextdb</code></pre>
-<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
-<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
-<p><img src="R4DS_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<div class="sourceCode" id="cb167"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb167-1"><a href="rmarkdown.html#cb167-1"></a><span class="bn">```{r, out.width = &#39;85%&#39;, fig.showtext = TRUE}</span></span>
+<span id="cb167-2"><a href="rmarkdown.html#cb167-2"></a><span class="bn">library(tidyverse)</span></span>
+<span id="cb167-3"><a href="rmarkdown.html#cb167-3"></a><span class="bn">library(nycflights13)</span></span>
+<span id="cb167-4"><a href="rmarkdown.html#cb167-4"></a><span class="bn">library(showtext)</span></span>
+<span id="cb167-5"><a href="rmarkdown.html#cb167-5"></a><span class="bn">showtext_auto()</span></span>
+<span id="cb167-6"><a href="rmarkdown.html#cb167-6"></a></span>
+<span id="cb167-7"><a href="rmarkdown.html#cb167-7"></a><span class="bn">flights %&gt;%</span></span>
+<span id="cb167-8"><a href="rmarkdown.html#cb167-8"></a><span class="bn">  group_by(dest) %&gt;%</span></span>
+<span id="cb167-9"><a href="rmarkdown.html#cb167-9"></a><span class="bn">  summarize(</span></span>
+<span id="cb167-10"><a href="rmarkdown.html#cb167-10"></a><span class="bn">    count = n(),</span></span>
+<span id="cb167-11"><a href="rmarkdown.html#cb167-11"></a><span class="bn">    dist = mean(distance, na.rm = TRUE),</span></span>
+<span id="cb167-12"><a href="rmarkdown.html#cb167-12"></a><span class="bn">    delay = mean(arr_delay, na.rm = TRUE)</span></span>
+<span id="cb167-13"><a href="rmarkdown.html#cb167-13"></a><span class="bn">  ) %&gt;%</span></span>
+<span id="cb167-14"><a href="rmarkdown.html#cb167-14"></a><span class="bn">  dplyr::filter(delay &gt; 0, count &gt; 20, dest != &quot;HNL&quot;) %&gt;%</span></span>
+<span id="cb167-15"><a href="rmarkdown.html#cb167-15"></a><span class="bn">  ggplot(mapping = aes(x = dist, y = delay)) +</span></span>
+<span id="cb167-16"><a href="rmarkdown.html#cb167-16"></a><span class="bn">  geom_point(aes(size = count), alpha = 1 / 3) +</span></span>
+<span id="cb167-17"><a href="rmarkdown.html#cb167-17"></a><span class="bn">  geom_smooth(se = FALSE) +</span></span>
+<span id="cb167-18"><a href="rmarkdown.html#cb167-18"></a><span class="bn">  ggtitle(&quot;这是我的标题&quot;)</span></span>
+<span id="cb167-19"><a href="rmarkdown.html#cb167-19"></a><span class="bn">```</span></span></code></pre></div>
+<p><img src="R4DS_files/figure-html/unnamed-chunk-10-1.png" width="576" /></p>
 <a href="data:text/x-markdown;base64,LS0tCnRpdGxlOiAi5ZyoUm1hcmtkb3du6YeM5aaC5L2V55Sf5oiQcGRm5paH5qGjIgphdXRob3I6ICLnjovmlY/mnbAiCmRhdGU6ICJgciBTeXMuRGF0ZSgpYCIKb3V0cHV0OgogIHBkZl9kb2N1bWVudDogCiAgICBsYXRleF9lbmdpbmU6IHhlbGF0ZXgKICAgIGV4dHJhX2RlcGVuZGVuY2llczoKICAgICAgY3RleDogVVRGOAogICAgbnVtYmVyX3NlY3Rpb25zOiB5ZXMKICAgIGRmX3ByaW50OiBrYWJsZQogICAgdG9jOiB5ZXMKY2xhc3NvcHRpb25zOiAiaHlwZXJyZWYsIDEycHQsIGE0cGFwZXIiCi0tLQoKCgpgYGB7ciBzZXR1cCwgaW5jbHVkZT1GQUxTRX0Ka25pdHI6Om9wdHNfY2h1bmskc2V0KGVjaG8gPSBUUlVFLCAKICAgICAgICAgICAgICAgICAgICAgIHdhcm5pbmcgPSBGQUxTRSwgCiAgICAgICAgICAgICAgICAgICAgICBtZXNzYWdlID0gRkFMU0UsCiAgICAgICAgICAgICAgICAgICAgICBmaWcud2lkdGggPSA2LCAKICAgICAgICAgICAgICAgICAgICAgIGZpZy5oZWlnaHQgPSA0LAogICAgICAgICAgICAgICAgICAgICAgZmlnLnNob3d0ZXh0ID0gVFJVRQogICAgICAgICAgICAgICAgICAgICAgKQpgYGAKCgoKCiMg5b+F6KaB55qE6YWN572uCgoqIOehruS/neW3sue7j+WuieijhWBybWFya2Rvd25g5a6P5YyFCiAgKyBgaW5zdGFsbC5wYWNrYWdlcygicm1hcmtkb3duIilgCiAgKyBgUnN0dWRpb2Ag6I+c5Y2V77yaIGBGaWxlIC0+IE5ldyBGaWxlIC0+IFIgTWFya2Rvd25gCiAgCiAgCiAgCiog5a6J6KOFcGRm5p+l55yL5ZmoCiAgKyAgW3N1bWF0cmFwZGbnvZHnq5ldKGh0dHBzOi8vd3d3LnN1bWF0cmFwZGZyZWFkZXIub3JnL2Rvd25sb2FkLWZyZWUtcGRmLXZpZXdlci5odG1sKQogCiAKIAoqIOaWh+aho+S4reS9v+eUqCBsYXRleCDlhazlvI/lkozkuK3mlocKICArICBgaW5zdGFsbC5wYWNrYWdlcygidGlueXRleCIpYAogICsgIGB0aW55dGV4OjppbnN0YWxsX3Rpbnl0ZXgoKWAKCgoKCiMg5L2/55So5pa55rOVCiMjIOaPkuWFpeWFrOW8jwoK5oiR55u45L+h5L2g5bey57uP54af5oKJ5LqGbGF0ZXjor63ms5XvvIzpgqPkuYjmiJHku6zlnKhybWTph4zovpPlhaUKYCQkXGZyYWN7XHN1bSAoXGJhcnt4fSAtIHhfaSleMn17bi0xfSQkYO+8jOmCo+S5iOWunumZhei+k+WHujoKCiQkXGZyYWN7XHN1bSAoXGJhcnt4fSAtIHhfaSleMn17bi0xfSQkCgrkuZ/lj6/ku6Xkvb/nlKhsYXRleOeahOetieW8j+eOr+Wig++8jCAKJCRcVGhldGEgPSBcYmVnaW57cG1hdHJpeH1cYWxwaGEgJiBcYmV0YVxcClxnYW1tYSAmIFxkZWx0YQpcZW5ke3BtYXRyaXh9JCQKCgoKCgoKCiMjIOaPkuWFpeihqOagvAoKYGBge3IgdGFibGVzLW10Y2Fyc30Ka25pdHI6OmthYmxlKGlyaXNbMTo1LCBdLCBjYXB0aW9uID0gJ0EgY2FwdGlvbicpCmBgYAoKCiMjIOaPkuWFpeWbvueJhwoKCmBgYHtyLCBvdXQud2lkdGg9JzIwJScsIGZpZy5hbGlnbj0nY2VudGVyJywgZmlnLmNhcD0ndGhpcyBpcyBjYXB0aW9uJywgZWNobyA9IEZ9CmtuaXRyOjppbmNsdWRlX2dyYXBoaWNzKCJpbWFnZXMvZ2lybC5qcGciKQpgYGAKCgoKIyMg6L+Q6KGM5Luj56CBCgpgYGB7ciBjYXJzfQpzdW1tYXJ5KGNhcnMpCmBgYAoKCiMjIOeUn+aIkOWbvueJhwoKYGBge3J9CmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KG55Y2ZsaWdodHMxMykKbGlicmFyeShzaG93dGV4dCkKc2hvd3RleHRfYXV0bygpCgpmbGlnaHRzICU+JQogIGdyb3VwX2J5KGRlc3QpICU+JQogIHN1bW1hcml6ZSgKICAgIGNvdW50ID0gbigpLAogICAgZGlzdCA9IG1lYW4oZGlzdGFuY2UsIG5hLnJtID0gVFJVRSksCiAgICBkZWxheSA9IG1lYW4oYXJyX2RlbGF5LCBuYS5ybSA9IFRSVUUpCiAgKSAlPiUKICBmaWx0ZXIoZGVsYXksIGNvdW50ID4gMjAsIGRlc3QgIT0gIkhOTCIpICU+JQogIGdncGxvdChtYXBwaW5nID0gYWVzKHggPSBkaXN0LCB5ID0gZGVsYXkpKSArCiAgZ2VvbV9wb2ludChhZXMoc2l6ZSA9IGNvdW50KSwgYWxwaGEgPSAxIC8gMykgKwogIGdlb21fc21vb3RoKHNlID0gRkFMU0UpICsKICBnZ3RpdGxlKCLov5nmmK/miJHnmoTmoIfpopgiKQpgYGAKCgoKCg==" download="my_pdf_document.Rmd">Download my_pdf_document.Rmd</a>
 </div>
 </div>
@@ -1301,15 +1294,15 @@ LaTeX，我推荐你安装轻量级的 <code>tinytex</code>. 安装方法如下�
 <a href="readr.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/lunr.js"></script>
+<script src="libs/gitbook/js/clipboard.min.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script src="libs/gitbook/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({

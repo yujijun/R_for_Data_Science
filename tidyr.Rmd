@@ -132,6 +132,12 @@ plant_height %>%
 画图的问题也就解决了
 
 ```{r tidyr-12}
+long <- plant_height %>%
+  pivot_longer(
+    cols = A:D,
+    names_to = "plant",
+    values_to = "height"
+  )
 long %>% 
   ggplot(aes(x = Day, y = height, color = plant)) +
   geom_line()
