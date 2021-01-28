@@ -36,7 +36,9 @@ knitr::opts_chunk$set(
 ```
 
 # 前言 {-}
-你好，这里是小于《数据科学中的R语言》的课程内容。考虑到大家初入门，因此讲授的内容不会太深奥（要有信心喔）。
+大家好，我是于吉军,大家可以叫我小于；这里是小于《数据科学中的R语言》课程内容。很有幸能跟大家一起学习。
+
+考虑到大家初入门，因此讲授的内容不会太深奥（要有信心喔）。
 
 比如在课程中以下内容就不会出现
 
@@ -66,11 +68,11 @@ knitr::include_graphics("images/rbook1.png")
 
 1、课程安排是这样的，每个章节研究的内容都是彼此独立的，大家可以单独阅读每章及运行代码。
 
-- 基础篇
+- 基础入门篇
    - 第 \@ref(intro-ds) 章介绍数据科学基础
    - 第 \@ref(intro-R) 章介绍R语言基本概念
    - 第 \@ref(subsetting) 章介绍R语言中的子集选取
-- tidyverse篇
+- 数据高端处理和展示-tidyverse篇
    - 第 \@ref(rmarkdown) 章介绍可重复性报告
    - 第 \@ref(readr) 章介绍数据读入
    - 第 \@ref(dplyr) 章介绍数据处理
@@ -126,7 +128,10 @@ knitr::include_graphics("images/rbook1.png")
    - 第 \@ref(ggplot2-academic) 章介绍科研数据可视化中的统计分布图
    - 第 \@ref(ggplot2-colors) 章介绍数据可视化中的配色
    - 第 \@ref(ggplot2-gganimate) 章让你的数据骚动起来
-   - 第 \@ref(lazyman) 章介绍我收集的一些有用和有趣的宏包
+   - 第 \@ref(lazyman)
+章介绍我收集的一些有用和有趣的宏包
+- 组学数据分析pipeline
+   - 第 \@ref(RNAseq) 章介绍RNAseq数据处理的流程
 
 
 
@@ -164,7 +169,25 @@ knitr::include_graphics("images/rbook1.png")
    - 代码是什么？
    - 报错信息是什么？
 
+6、**关于如何更新书籍**
 
+- 新建一个.Rmd 文件
+   - 写上文章名称 # 随机数 {#rng} （注意：这是展示的真实的章节名称）
+
+- 更改_bookdown.yml文件，将相应章节添加到其中
+   - 举例："RNAseq_pipeline.Rmd"（需要添加的是真实的*.Rmd 名称）
+
+- 更改.Rmd 中的文件
+   -如何需要，可以使用在线工具[mdeditor](http://www.mdeditor.com/)
+
+- 运行index.Rmd
+   -看结构
+
+- 运行新添加的*.Rmd文件
+   -看内容
+
+- 将更改内容上传到github
+   
 
 ## 课件中用到的宏包 {-}
 

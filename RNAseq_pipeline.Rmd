@@ -1,0 +1,36 @@
+# RNAseq流程 {#RNAseq}
+
+本章我们主要介绍以下RNAseq分析中常用的工具和方法的流程，及其相应的链接文件：
+
+1.上游测序数据处理之后，得到多个txt文件，我们改如何将其整合到一起呢？[多个样品txt文件整理成一个表达矩阵](https://mp.weixin.qq.com/s/fnpqX9FZfJBjenOvU8A9MA)
+
+```{r example_cold, echo=TRUE,eval=FALSE}
+#批量读取：
+fs=list.files('GSE123005_RAW/')
+fs
+dat=lapply(fs, function(i){
+  read.table(file.path('GSE123005_RAW/',i),header = T)
+})
+lapply(dat, head)
+do.call(rbind,lapply(dat, dim))
+#预处理之后整合：
+dat = lapply(dat, function(x){
+  # x=dat[[2]]
+  x=x[x[,5]>0.1,]
+  x=x[x[,1]!='-',] 
+  x=x[order(x[,1],x[,5],decreasing = T),]
+  x=x[!duplicated(x[,1]),] 
+  rownames(x)=x[,1]
+  x
+})
+ids=unique(unlist( lapply(dat,rownames)))
+df = do.call(cbind,
+             lapply(dat, function(x){
+               x[ids,5]
+             }))
+head(df)
+rownames(df)=ids
+colnames(df)=substring(fs,12,14)
+head(df)
+
+```

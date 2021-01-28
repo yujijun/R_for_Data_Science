@@ -78,6 +78,9 @@ rmd_files: [
   "ggplot2_gganimate.Rmd",
   "lazyman.Rmd",
 
+  # 组学数据分析pipeline
+  "RNAseq_pipeline.Rmd",
+
 
   "Appendix.Rmd",
   "references.Rmd"
