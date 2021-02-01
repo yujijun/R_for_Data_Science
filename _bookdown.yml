@@ -80,8 +80,8 @@ rmd_files: [
 
   # 组学数据分析pipeline
   "RNAseq_pipeline.Rmd",
-
+  "downstream_analysis.Rmd",
 
   "Appendix.Rmd",
-  "references.Rmd"
+  "references.Rmd",
 ]
