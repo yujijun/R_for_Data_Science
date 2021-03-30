@@ -1,0 +1,8 @@
+---
+title: "Conclusion"
+author: "JijunYu"
+date: "3/9/2021"
+output: html_document
+---
+## 正则表达式Conclusion
+1. 将filter 和 str_detect() 进行整合，可以实现超强筛选。

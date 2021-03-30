@@ -148,8 +148,9 @@ df <- df %>% mutate(newscore = score2020)
 df
 ```
 
-
-
+---------------
+**注意⚠️：管道命令的中，后面的函数第一个参数不需要留空mutate(.,score=score);直接写mutate(score=score)就好**
+---------------
 
 ## `select() `
 
@@ -170,6 +171,7 @@ knitr::include_graphics("images/dplyr-select.png")
 df["name"]
 ```
 
+**注意⚠️：Select的函数中，列名不需要加引号**
 
 - dplyr 的方法
 ```{r dplyr-21}
@@ -215,7 +217,7 @@ df %>% filter(newscore >= 90)
 df %>% filter(type == "english", newscore >= 90)
 ```
 
-
+**注意⚠️：filter的函数中，列名依然不需要加引号，然后用逗号一个个隔开就好,同时，这些不同的判断条件之间也是用逗号连接**
 
 
 ## `summarise() `统计
@@ -380,6 +382,12 @@ Carol同学的信息没有了？ 大家想想又为什么呢？
 knitr::include_graphics("images/join_examples.jpg")
 ```
 
+
+## 总结
+- **dplyr系列函数，列名参数基本都不需要加引号**
+- **dplyr系列函数用管道更加直观**
+- **管道第一个参数不需要留空**
+- **summarise一般与函数组合，group_by与summarise组合**
 
 
 

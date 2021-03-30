@@ -132,8 +132,9 @@ knitr::include_graphics("images/rbook1.png")
 - 组学数据分析pipeline
    - 第 \@ref(RNAseq) 章介绍RNAseq数据处理的流程
    - 第 \@ref(downstream_analysis) 章介绍组学数据下游分析
-
-
+   - 第 \@ref(scRNA-seq) 章介绍单细胞组学数据分析
+   - 第 \@ref(dataset_down) 章介绍生物学数据下载
+   - 第 \@ref(bioinformatics_info) 章介绍生物信息学分析中常用的资源链接
 
 2、**课件源代码和数据**
 

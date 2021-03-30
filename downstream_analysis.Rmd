@@ -1,7 +1,10 @@
 # 组学数据下游分析 {#downstream_analysis}
 本章我们主要接受下游分析中常用的工具和方法：
 
+## 计算差异表达基因
 1. 组学数据差异表达分析比较适用的详细教程有：
+
+## 差异表达基因的展示
 
 2. 差异表达基因的展示：
 2.1 计算出差异表达基因后，常用火山图进行展示：
@@ -123,5 +126,40 @@ cellcol_mono_new = c("#4f6980","#849db1","#BEBADA",
 
 ```
 
+## 富集分析
+
 3. 计算完差异表达之后，下一步一般是进行[富集分析](http://yulab-smu.top/clusterProfiler-book/chapter2.html),可以参考富集分析的链接进行分析和展示。
+
+## 生存分析
+
+4. 有时也需要进行生存分析，筛选对临床预后有很好指示作用的markers
+Lasso + Cox 生存分析模式
+一、为什么需要用 Lasso + Cox 生存分析模式
+一般我们在筛选影响患者预后的变量时，通常先进行单因素Cox分析筛选出关联的变量，然后构建多因素模型进一步确认变量与生存的关联是否独立。
+
+但这种做法没有考虑到变量之间多重共线性的影响，有时候我们甚至会发现单因素和多因素Cox回归得到的风险比是矛盾的，这是变量之间多重共线性导致模型 失真的结果。并且，当变量个数大于样本量时（例如筛选影响预后的基因或突变位点，候选的变量数可能远超样本个数），此时传统的Cox回归的逐步回归、前 进法、后退法等变量筛选方法都不再适用。
+
+因此，当变量之间存在多重共线性或者变量个数大于样本量时，需要用Lasso(Least absolute shrinkage and selection operator)回归首先进行变量的筛选，然后构建Cox回归模型分析预后影响，这就是Lasso + Cox 生存分析模式。
+
+二、什么是 Lasso + Cox 生存分析模式
+Lasso可以在模型参数估计的同时实现变量的选择，能够较好的解决回归分析中的多重共线性问题，并且能够很好的解释结果。
+Lasso回归算法使用L1范数进行收缩惩罚，对一些对于因变量贡献不大的变量系数进行罚分矫正，将一些不太重要的变量的系数压缩为0，保留重要变量的系数大于0，以减少Cox回归中协变量的个数。
+
+R 代码示例：
+```{r R_lasso_cox,echo=TRUE,eval=FALSE}
+library(glmnet)
+library(survival)
+```
+
+```{r clinical0, echo = FALSE, out.width = "100%"}
+knitr::include_graphics("images/clinical.png")
+```
+
+```{r clinical1, echo = FALSE, out.width = "100%"}
+knitr::include_graphics("images/clinical1.png")
+```
+
+```{r clinical2, echo = FALSE, out.width = "100%"}
+knitr::include_graphics("images/clinical2.png")
+```
 

@@ -81,6 +81,9 @@ rmd_files: [
   # 组学数据分析pipeline
   "RNAseq_pipeline.Rmd",
   "downstream_analysis.Rmd",
+  "scRNA-seq.Rmd",
+  "dataset_download.Rmd",
+  "bioinformatics_info.Rmd",
 
   "Appendix.Rmd",
   "references.Rmd",

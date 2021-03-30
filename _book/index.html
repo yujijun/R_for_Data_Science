@@ -24,7 +24,7 @@
 <meta name="author" content="于吉军" />
 
 
-<meta name="date" content="2021-02-02" />
+<meta name="date" content="2021-03-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -228,7 +228,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.7" data-path="dplyr.html"><a href="dplyr.html#arrange排序"><i class="fa fa-check"></i><b>6.7</b> <code>arrange()</code>排序</a></li>
 <li class="chapter" data-level="6.8" data-path="dplyr.html"><a href="dplyr.html#left_join"><i class="fa fa-check"></i><b>6.8</b> <code>left_join()</code></a></li>
 <li class="chapter" data-level="6.9" data-path="dplyr.html"><a href="dplyr.html#right_join"><i class="fa fa-check"></i><b>6.9</b> <code>right_join()</code></a></li>
-<li class="chapter" data-level="6.10" data-path="dplyr.html"><a href="dplyr.html#延伸阅读-3"><i class="fa fa-check"></i><b>6.10</b> 延伸阅读</a></li>
+<li class="chapter" data-level="6.10" data-path="dplyr.html"><a href="dplyr.html#总结"><i class="fa fa-check"></i><b>6.10</b> 总结</a></li>
+<li class="chapter" data-level="6.11" data-path="dplyr.html"><a href="dplyr.html#延伸阅读-3"><i class="fa fa-check"></i><b>6.11</b> 延伸阅读</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="ggplot2-aes.html"><a href="ggplot2-aes.html"><i class="fa fa-check"></i><b>7</b> 数据可视化</a><ul>
 <li class="chapter" data-level="7.1" data-path="ggplot2-aes.html"><a href="ggplot2-aes.html#为什么要可视化"><i class="fa fa-check"></i><b>7.1</b> 为什么要可视化</a></li>
@@ -422,7 +423,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="18.4.2" data-path="ggplot2-stat-layer.html"><a href="ggplot2-stat-layer.html#带有彩色填充色的柱状图"><i class="fa fa-check"></i><b>18.4.2</b> 带有彩色填充色的柱状图</a></li>
 <li class="chapter" data-level="18.4.3" data-path="ggplot2-stat-layer.html"><a href="ggplot2-stat-layer.html#大小变化的点线图"><i class="fa fa-check"></i><b>18.4.3</b> 大小变化的点线图</a></li>
 </ul></li>
-<li class="chapter" data-level="18.5" data-path="ggplot2-stat-layer.html"><a href="ggplot2-stat-layer.html#总结"><i class="fa fa-check"></i><b>18.5</b> 总结</a><ul>
+<li class="chapter" data-level="18.5" data-path="ggplot2-stat-layer.html"><a href="ggplot2-stat-layer.html#总结-1"><i class="fa fa-check"></i><b>18.5</b> 总结</a><ul>
 <li class="chapter" data-level="18.5.1" data-path="ggplot2-stat-layer.html"><a href="ggplot2-stat-layer.html#主要结论"><i class="fa fa-check"></i><b>18.5.1</b> 主要结论</a></li>
 <li class="chapter" data-level="18.5.2" data-path="ggplot2-stat-layer.html"><a href="ggplot2-stat-layer.html#stat-vs.-geom-or-stat-and-geom"><i class="fa fa-check"></i><b>18.5.2</b> STAT vs. GEOM or STAT and GEOM?</a></li>
 </ul></li>
@@ -1019,7 +1020,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="57.22" data-path="lazyman.html"><a href="lazyman.html#各种插件任君选取"><i class="fa fa-check"></i><b>57.22</b> 各种插件，任君选取</a></li>
 </ul></li>
 <li class="chapter" data-level="58" data-path="RNAseq.html"><a href="RNAseq.html"><i class="fa fa-check"></i><b>58</b> RNAseq流程</a></li>
-<li class="chapter" data-level="59" data-path="downstream-analysis.html"><a href="downstream-analysis.html"><i class="fa fa-check"></i><b>59</b> 组学数据下游分析</a></li>
+<li class="chapter" data-level="59" data-path="downstream-analysis.html"><a href="downstream-analysis.html"><i class="fa fa-check"></i><b>59</b> 组学数据下游分析</a><ul>
+<li class="chapter" data-level="59.1" data-path="downstream-analysis.html"><a href="downstream-analysis.html#计算差异表达基因"><i class="fa fa-check"></i><b>59.1</b> 计算差异表达基因</a></li>
+<li class="chapter" data-level="59.2" data-path="downstream-analysis.html"><a href="downstream-analysis.html#差异表达基因的展示"><i class="fa fa-check"></i><b>59.2</b> 差异表达基因的展示</a></li>
+<li class="chapter" data-level="59.3" data-path="downstream-analysis.html"><a href="downstream-analysis.html#富集分析"><i class="fa fa-check"></i><b>59.3</b> 富集分析</a></li>
+<li class="chapter" data-level="59.4" data-path="downstream-analysis.html"><a href="downstream-analysis.html#生存分析"><i class="fa fa-check"></i><b>59.4</b> 生存分析</a></li>
+</ul></li>
+<li class="chapter" data-level="60" data-path="scRNA-seq.html"><a href="scRNA-seq.html"><i class="fa fa-check"></i><b>60</b> 单细胞分析总结</a><ul>
+<li class="chapter" data-level="60.1" data-path="scRNA-seq.html"><a href="scRNA-seq.html#搭建单细胞环境"><i class="fa fa-check"></i><b>60.1</b> 搭建单细胞环境</a></li>
+<li class="chapter" data-level="60.2" data-path="scRNA-seq.html"><a href="scRNA-seq.html#多样本合并与批次矫正"><i class="fa fa-check"></i><b>60.2</b> 多样本合并与批次矫正</a></li>
+<li class="chapter" data-level="60.3" data-path="scRNA-seq.html"><a href="scRNA-seq.html#数据质控"><i class="fa fa-check"></i><b>60.3</b> 数据质控</a></li>
+<li class="chapter" data-level="60.4" data-path="scRNA-seq.html"><a href="scRNA-seq.html#降维与聚类"><i class="fa fa-check"></i><b>60.4</b> 降维与聚类</a></li>
+<li class="chapter" data-level="60.5" data-path="scRNA-seq.html"><a href="scRNA-seq.html#细胞类型鉴定"><i class="fa fa-check"></i><b>60.5</b> 细胞类型鉴定</a></li>
+<li class="chapter" data-level="60.6" data-path="scRNA-seq.html"><a href="scRNA-seq.html#细胞再聚类"><i class="fa fa-check"></i><b>60.6</b> 细胞再聚类</a></li>
+<li class="chapter" data-level="60.7" data-path="scRNA-seq.html"><a href="scRNA-seq.html#rna速率"><i class="fa fa-check"></i><b>60.7</b> RNA速率</a></li>
+<li class="chapter" data-level="60.8" data-path="scRNA-seq.html"><a href="scRNA-seq.html#差异基因富集分析"><i class="fa fa-check"></i><b>60.8</b> 差异基因富集分析</a></li>
+<li class="chapter" data-level="60.9" data-path="scRNA-seq.html"><a href="scRNA-seq.html#gsea-和-gsva-分析"><i class="fa fa-check"></i><b>60.9</b> GSEA 和 GSVA 分析</a></li>
+<li class="chapter" data-level="60.10" data-path="scRNA-seq.html"><a href="scRNA-seq.html#转录调控网络"><i class="fa fa-check"></i><b>60.10</b> 转录调控网络</a></li>
+<li class="chapter" data-level="60.11" data-path="scRNA-seq.html"><a href="scRNA-seq.html#细胞通讯分析"><i class="fa fa-check"></i><b>60.11</b> 细胞通讯分析</a></li>
+<li class="chapter" data-level="60.12" data-path="scRNA-seq.html"><a href="scRNA-seq.html#scrna数据分析cnv"><i class="fa fa-check"></i><b>60.12</b> scRNA数据分析CNV</a></li>
+<li class="chapter" data-level="60.13" data-path="scRNA-seq.html"><a href="scRNA-seq.html#整合vdj-分析"><i class="fa fa-check"></i><b>60.13</b> 整合VDJ 分析</a></li>
+<li class="chapter" data-level="60.14" data-path="scRNA-seq.html"><a href="scRNA-seq.html#选marker训练分类器"><i class="fa fa-check"></i><b>60.14</b> 选marker，训练分类器</a></li>
+<li class="chapter" data-level="60.15" data-path="scRNA-seq.html"><a href="scRNA-seq.html#bulkrna中细胞类型比例的r包"><i class="fa fa-check"></i><b>60.15</b> bulkRNA中细胞类型比例的R包</a></li>
+<li class="chapter" data-level="60.16" data-path="scRNA-seq.html"><a href="scRNA-seq.html#可以用tcga-生存分析"><i class="fa fa-check"></i><b>60.16</b> 可以用TCGA 生存分析</a></li>
+<li class="chapter" data-level="60.17" data-path="scRNA-seq.html"><a href="scRNA-seq.html#整合scatac-分析"><i class="fa fa-check"></i><b>60.17</b> 整合scATAC 分析</a></li>
+<li class="chapter" data-level="60.18" data-path="scRNA-seq.html"><a href="scRNA-seq.html#单细胞可视化工具总结"><i class="fa fa-check"></i><b>60.18</b> 单细胞可视化工具总结</a></li>
+<li class="chapter" data-level="60.19" data-path="scRNA-seq.html"><a href="scRNA-seq.html#好用的reference"><i class="fa fa-check"></i><b>60.19</b> 好用的Reference:</a></li>
+<li class="chapter" data-level="60.20" data-path="scRNA-seq.html"><a href="scRNA-seq.html#思考-2"><i class="fa fa-check"></i><b>60.20</b> 思考</a></li>
+</ul></li>
+<li class="chapter" data-level="61" data-path="dataset-download.html"><a href="dataset-download.html"><i class="fa fa-check"></i><b>61</b> 生物学数据下载</a><ul>
+<li class="chapter" data-level="61.1" data-path="dataset-download.html"><a href="dataset-download.html#清洗过的肿瘤数据下载"><i class="fa fa-check"></i><b>61.1</b> 清洗过的肿瘤数据下载：</a></li>
+</ul></li>
+<li class="chapter" data-level="62" data-path="bioinformatics-info.html"><a href="bioinformatics-info.html"><i class="fa fa-check"></i><b>62</b> 生物信息学常用资料总结</a><ul>
+<li class="chapter" data-level="62.1" data-path="bioinformatics-info.html"><a href="bioinformatics-info.html#文章思路总结"><i class="fa fa-check"></i><b>62.1</b> 文章思路总结</a></li>
+</ul></li>
 <li class="appendix"><span><b>附录</b></span></li>
 <li class="chapter" data-level="A" data-path="exams.html"><a href="exams.html"><i class="fa fa-check"></i><b>A</b> 期末考试</a><ul>
 <li class="chapter" data-level="A.1" data-path="exams.html"><a href="exams.html#方式"><i class="fa fa-check"></i><b>A.1</b> 方式</a></li>
@@ -1050,7 +1084,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">数据科学中的 R 语言</h1>
 <p class="author"><em>于吉军</em></p>
-<p class="date"><em>2021-02-02</em></p>
+<p class="date"><em>2021-03-30</em></p>
 </div>
 <div id="前言" class="section level1 unnumbered">
 <h1>前言</h1>
@@ -1151,6 +1185,9 @@ f(x)=\frac{1}{\sqrt{2 \pi}} e^{-\frac{1}{2} x^{2}}
 <ul>
 <li>第 <a href="RNAseq.html#RNAseq">58</a> 章介绍RNAseq数据处理的流程</li>
 <li>第 @ref(downstream_analysis) 章介绍组学数据下游分析</li>
+<li>第 <a href="scRNA-seq.html#scRNA-seq">60</a> 章介绍单细胞组学数据分析</li>
+<li>第 @ref(dataset_down) 章介绍生物学数据下载</li>
+<li>第 @ref(bioinformatics_info) 章介绍生物信息学分析中常用的资源链接</li>
 </ul></li>
 </ul>
 <p>2、<strong>课件源代码和数据</strong></p>
@@ -1185,24 +1222,6 @@ f(x)=\frac{1}{\sqrt{2 \pi}} e^{-\frac{1}{2} x^{2}}
 <li>代码是什么？</li>
 <li>报错信息是什么？</li>
 </ul></li>
-</ul>
-<p>6、<strong>关于如何更新书籍</strong></p>
-<ul>
-<li><p>新建一个.Rmd 文件</p>
-<ul>
-<li>写上文章名称 # 随机数 {#rng} （注意：这是展示的真实的章节名称）</li>
-</ul></li>
-<li><p>更改_bookdown.yml文件，将相应章节添加到其中</p>
-<ul>
-<li>举例：“RNAseq_pipeline.Rmd”（需要添加的是真实的*.Rmd 名称）</li>
-</ul></li>
-<li><p>更改.Rmd 中的文件
--如何需要，可以使用在线工具<a href="http://www.mdeditor.com/">mdeditor</a></p></li>
-<li><p>运行index.Rmd
--看结构</p></li>
-<li><p>运行新添加的*.Rmd文件
--看内容</p></li>
-<li><p>将更改内容上传到github</p></li>
 </ul>
 </div>
 <div id="课件中用到的宏包" class="section level2 unnumbered">

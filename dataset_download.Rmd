@@ -1,0 +1,7 @@
+# 生物学数据下载 {#dataset_download}
+
+## 清洗过的肿瘤数据下载： 
+1.HNSC数据集下载 https://xenabrowser.net/datapages/
+  Reference:https://mp.weixin.qq.com/s/yFd2WWpO9V-clHIMUfajzg
+
+

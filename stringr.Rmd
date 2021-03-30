@@ -814,7 +814,7 @@ pairs <-
 text %>% str_replace_all(pairs)
 ```
 
-
+**注意⚠️：str_replace_all 如果要替换多个变量，可以直接输入一个带名称的向量。**
 
 
 ## 回答提问
